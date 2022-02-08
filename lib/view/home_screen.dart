@@ -1,12 +1,16 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_declarations, prefer_const_constructors_in_immutables
 
 import 'package:flutter/material.dart';
+import 'package:game/constant/players.dart';
 import 'package:game/controller/home_controller.dart';
 import 'package:game/helper/helper.dart';
 import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class HomeScreen extends StatelessWidget {
   final HomeController homeController = Get.put(HomeController());
+
+  HomeScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -57,11 +61,11 @@ class HomeScreen extends StatelessWidget {
           },
           child: Text(
             value,
-            style: TextStyle(
+            style: GoogleFonts.rowdies(
               color: value == "X"
                   ? Color.fromARGB(255, 233, 25, 10)
                   : Color.fromARGB(255, 3, 250, 12),
-              fontSize: 32,
+              fontSize: 40,
             ),
           )),
     );

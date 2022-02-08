@@ -10,7 +10,8 @@ class Helper {
           .values
           .toList();
 
-  static isWinner(int x, int y, List<List<String>> matrix, int countMatrix) {
+  static bool isWinner(
+      int x, int y, List<List<String>> matrix, int countMatrix) {
     var col = 0, row = 0, diag = 0, rdiag = 0;
     final player = matrix[x][y];
     final n = countMatrix;

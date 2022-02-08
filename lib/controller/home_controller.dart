@@ -30,7 +30,6 @@ class HomeController extends GetxController {
   ) {
     if (value == Players.noPlayer) {
       final newValue = lastMove == Players.O ? Players.X : Players.O;
-
       lastMove = newValue;
       metrixBox[x][y] = newValue;
       update(["game"]);
